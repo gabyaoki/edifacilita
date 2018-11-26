@@ -25,7 +25,12 @@ class Connect
 				break;
 			
 			case "singleData":
-				return mysqli_fetch_assoc($result);
+                if($result){
+				    return mysqli_fetch_assoc($result);
+                }
+                else {
+                    return false;
+                }
 				break;
 
 			default:		 
