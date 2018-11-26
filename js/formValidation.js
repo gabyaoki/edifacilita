@@ -6,7 +6,6 @@ function validateForm()
 	for (var i=0;i<arrReqFields.length;i++)
 	{
 		el = arrReqFields[i];
-		elLabel = el.previousElementSibling;
 
 		switch(el.tagName.toLowerCase())
 		{
@@ -29,7 +28,7 @@ function validateForm()
 				break;
 
 			default:
-				showError(el.value, elLabel);
+				showError(el.value, el);
 		}
 	}
 	return bSubmit;
@@ -41,7 +40,6 @@ function showError(checkState, thisEl)
 	if(!checkState) {
 		thisEl.className += " error";
 		bSubmit = false;
-		
 	} else {
 		thisEl.classList.remove("error");
 	}
