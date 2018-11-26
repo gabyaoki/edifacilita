@@ -22,7 +22,7 @@
 							<li>At&eacute; 60 cadastros</li>
 							<li>Com Propagandas</li>
 						</ul>
-						<a href="#" class="btn sec">Selecionar</a>
+						<input id="subGratis" class="btn main" type="submit" value="Selecionar" />
 					</div><!--//card-->
 				</div>
 
@@ -34,14 +34,14 @@
 							<li>At&eacute; 100 cadastros</li>
 							<li>Sem Propagandas</li>
 						</ul>
-						<a href="#" class="btn sec">Selecionar</a>
+						<input id="subPremium" class="btn main" type="submit" value="Selecionar" />
 					</div><!--//card-->
 				</div>
-
-				<input id="submitForm" class="btn main" type="submit" value="Confirmar" />
 			</form><!--//payment form-->
 		</div><!--//loginCont container-->
 	</div><!--//bgLogin-->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="js/formValidation.js"></script>
+	<script src="js/ajaxForm.js"></script>
 </body>
 </html>

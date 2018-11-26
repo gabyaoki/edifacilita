@@ -40,7 +40,6 @@ function showError(checkState, thisEl)
 	if(!checkState) {
 		thisEl.className += " error";
 		bSubmit = false;
-		
 	} else {
 		thisEl.classList.remove("error");
 	}

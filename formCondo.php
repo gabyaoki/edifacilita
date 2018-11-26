@@ -12,7 +12,7 @@
 
 			<h1>Cadastro de Condom&iacute;nio</h1>
 
-			<form method="post" action="#" onsubmit="return validateForm()" id="signUp" autocomplete="off">
+			<form method="post" action="#" id="signUp" autocomplete="off">
 
 				<div id="condoForm">
 					<div class="blockfield">
@@ -62,7 +62,7 @@
 						</div><!--//blockfield-->
 					</div>
 
-					<input id="submitForm" class="btn main" type="submit" value="Selecionar Plano" />
+					<input id="subCondo" class="btn main" type="submit" value="Selecionar Plano" />
 				</div>
 			</form><!--//signUp form-->
 		</div><!--//loginCont container-->
@@ -77,7 +77,6 @@
 			<a id="closeReg" onclick="return false;" href="#" class="btn main">Fechar</a>
 		</div>
 	</div>
-	<script src="js/formValidation.js"></script>
 	<script>
 		var close = document.getElementById('closeReg');
 		var modal = document.getElementById('modalReg');
@@ -89,6 +88,23 @@
 
 		link.addEventListener('click', function() {
 			modal.style.display = 'block';
+		});
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="js/formValidation.js"></script>
+	<script src="js/ajaxForm.js"></script>
+
+	<script>
+		$('#confPass').keyup(function() {
+			var pass = $('#password').val();
+			var passConf = $('#confPass').val();
+
+			if(pass != passConf) {
+				$('#confPass').addClass('error');
+			} else {
+				$('#confPass').removeClass('error');
+			}
 		});
 	</script>
 </body>

@@ -81,6 +81,19 @@ input, textarea {
     left: 0;
     right: 0;
     width: 100%;
+    text-align: center;
+}
+
+.alert {
+	padding: 15px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
 }
 
 .errors {
@@ -95,6 +108,12 @@ input, textarea {
 	border: 1px solid #840303;
 	background-color: #ffdada;
 	padding: 5px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /* ----------------- Login settings ----------------- */
@@ -135,7 +154,6 @@ input, textarea {
 #formCont {
 	max-width: 1200px;
 	width: 90%;
-	height: 100%;
 	padding: 25px 0;
 	background-color: #fff;
 	margin: auto;
@@ -185,6 +203,11 @@ input, textarea {
 	width: 50%;
 	margin: auto;
 	margin-bottom: 25px;
+}
+
+#payment {
+	width: 70%;
+	display: inline-block;
 }
 
 #moradorForm label, #moradorForm input, #condoForm label, #condoForm input, #payment input {
@@ -270,6 +293,7 @@ input, textarea {
 .selectSign {
 	width: 60%;
 	margin: auto;
+	display: inline-block;
 }
 
 .selectSign .cardPlan:hover {
@@ -312,11 +336,18 @@ input, textarea {
 	line-height: 20px;
 }
 
+.confirmPg h1 {
+	margin: 15px 0;
+}
+
+.confirmPg a {
+	margin-top: 25px;
+}
+
 /* ----------------- header settings ----------------- */
 
 nav {
-	width: 15%;
-	max-width: 150px;
+	width: 150px;
     position: fixed;
 	min-height: 100vh;
 	background: #f5f5f5;

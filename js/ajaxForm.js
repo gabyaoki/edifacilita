@@ -1,33 +1,67 @@
 $(function(){
-	$("#submitForm").on("click", function(){
+	$("#subMorador").on("click", function(){
 		$validation = validateForm();
 		if($validation == true)
 		{
 			$.ajax(
 			{	
-				url: "models/saveContact.php",
+				url: "models/saveMorador.php",
 				method: "POST",	
 				data: 
 				{
-					strName: $("#name").val(),
-					strEmail: $("#email").val(),
-					strPhone: $("#phone").val(),
-					strMessage: $("#description").val()
+					name: $("#name").val(),
+					email: $("#email").val(),
+					phone: $("#phone").val(),
+					phone2: $("#phone2").val(),
+					password: $("#password").val(),
+					dob: $("#dob").val(),
+					code: $("#aCode").val()
 				},				
 				success: function(result)
 				{
-					$(".alertMsg").css({
-						display: "block",
-						backgroundColor: "#cae9f3"
-					}).html('Thank you! See you soon.');;
-					$("#contactForm")[0].reset();
+					if(result==true) {
+						window.location = 'confirm.php';
+					} else {
+						window.location = 'formMorador.php?error=true';
+					}
 				},
-				error: function(result)
+				error: function(a, b, error)
 				{
-					$(".alertMsg").css({
-						display: "block",
-						backgroundColor: "#fad3e4"
-					}).html('Sorry! Please try later again.');
+					console.log(error);
+				}
+			});
+		}
+	return false;
+	});
+
+
+	$("#subCondo").on("click", function(){
+		$validation = validateForm();
+		if($validation == true)
+		{
+			$.ajax(
+			{	
+				url: "models/saveCondo.php",
+				method: "POST",	
+				data: 
+				{
+					name: $("#name").val(),
+					email: $("#email").val(),
+					phone: $("#phone").val(),
+					phone2: $("#phone2").val(),
+					password: $("#password").val(),
+					dob: $("#dob").val(),
+					code: $("#aCode").val()
+				},				
+				success: function(result)
+				{
+					if(result==true) {
+						window.location = 'confirm.php';
+					}
+				},
+				error: function(a, b, error)
+				{
+					console.log(error);
 				}
 			});
 		}
