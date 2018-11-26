@@ -101,8 +101,8 @@ input, textarea {
 
 #bgLogin {
 	background: #fff;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 }
 
 #bgLogin:before {
@@ -119,9 +119,9 @@ input, textarea {
 	opacity: 0.3;
 }
 
-#loginCont {
+#loginCont, #formCont {
 	max-width: 600px;
-	max-height: 500px;
+	max-height: 450px;
 	background: #fff;
 	position: absolute;
 	top: 0;
@@ -133,7 +133,7 @@ input, textarea {
 	opacity: 0.
 }
 
-#loginCont img {
+#loginCont img, #formCont img {
 	display: inline-block;
 	width: 150px;
 	margin-top: 10px;
@@ -158,6 +158,7 @@ input, textarea {
 #loginCont input[type=submit] {
 	display: inline-block;
 	margin-top: 25px;
+	cursor: pointer;
 }
 
 #login {
