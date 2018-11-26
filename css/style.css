@@ -1,0 +1,592 @@
+/* ----------------- General settings ----------------- */
+
+*{
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	box-sizing: border-box; 
+	font-family: 'PT Sans', sans-serif;
+	transition: all 0.1s linear;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+body {
+	padding-bottom: 46px;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+}
+
+h1, h2 {
+	font-family: 'PT Sans', sans-serif;
+	color: #000;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+input, textarea {
+	outline-width: 0;
+}
+
+.container {
+	width: 70%;
+	max-width: 1200px;
+	position: relative;
+	text-align: left;
+	min-height: 100%;
+	margin: auto;
+}
+
+.btn {
+	padding: 10px 25px;
+	border: 1px solid #000;
+	font-size: 16px;
+	margin-top: 15px;
+	display: inline-block;
+	font-family: 'PT Sans', sans-serif;
+	color: #000;
+	font-weight: bold;
+}
+
+.main {
+	background-color: #fad3e4; 
+}
+
+.main:hover {
+	background-color: #cae9f3; 
+}
+
+.sec {
+	background-color: #fff; 
+}
+.sec:hover {
+	background-color: #fad3e4; 
+}
+
+.msg {
+	padding: 15px;
+    color: #fff;
+    position: absolute;
+    top: 200px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.errors {
+	background-color: #840303;
+}
+
+.ok {
+	background-color: #196904;
+}
+
+.error {
+	border: 1px solid #840303;
+	background-color: #ffdada;
+	padding: 5px;
+}
+
+/* ----------------- Login settings ----------------- */
+
+#bgLogin {
+	background: #fff;
+	height: 100vh;
+	width: 100vw;
+}
+
+#bgLogin:before {
+	content: "";
+	background-color: #cae8ef;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.3;
+}
+
+#loginCont {
+	max-width: 600px;
+	max-height: 500px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	opacity: 0.
+}
+
+#loginCont img {
+	display: inline-block;
+	width: 150px;
+	margin-top: 10px;
+}
+
+#loginCont label, #loginCont input {
+	display: inline-block;
+	font-size: 16px;
+}
+
+#loginCont label {
+	margin: 10px 5px 10px 0;
+	font-weight: 700;
+}
+
+#loginCont input[type=text], #loginCont input[type=password] {
+	border: 0;
+	border-bottom: 1px solid #333;
+	padding-left: 5px;
+}
+
+#loginCont input[type=submit] {
+	display: inline-block;
+	margin-top: 25px;
+}
+
+#login {
+	margin-top: 75px;
+}
+
+.blockfield {
+	display: block;
+}
+
+/* ----------------- header settings ----------------- */
+
+nav {
+	width: 15%;
+	max-width: 150px;
+    position: fixed;
+	min-height: 100vh;
+	background: #f5f5f5;
+	z-index: 999;
+}
+
+nav .options {
+	padding-bottom: 9px;
+}
+
+nav .options i {
+	font-size: 15px;
+    display: inline-block;
+    float: left;
+    margin-top: 4px;
+}
+
+nav .options .label {
+	display: inline-block;
+    float: left;
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+
+#logoCms {
+	display: block;
+	text-align: center;
+}
+
+#logoCms img {
+	width: 90%;
+	padding: 15px;
+}
+
+.options {
+	text-align: left;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.options:hover {
+	background-color: #ffd4e6;
+}
+
+.options a {
+	display: block;
+	height: 100%;
+	color: #000;
+	transition: all 0.1s linear;
+	padding: 10px 25px;
+}
+
+.label, .fa-users, .fa-edit {
+	display: block;
+}
+
+.label {
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+.fa-users, .fa-edit {
+	font-size: 20px;
+}
+
+/* ----------------- dashboard settings ----------------- */
+
+#dashboard, #manage, #add {
+	position: relative;
+	margin: auto;
+	width: 90%;
+	padding: 35px 0;
+	overflow: auto;
+}
+
+#dashboard h1, #users h1 {
+	margin-bottom: 20px;
+	font-size: 35px;
+}
+
+#dashboard p {
+	line-height: 35px;
+}
+
+/* ----------------- manage settings ----------------- */
+
+#users h2 {
+	padding: 70px 0 20px;
+	font-size: 35px;
+	display: block;
+	clear: both;
+}
+
+#subPages {
+	margin-top: 45px;
+	display: inline-block;
+	width: 100%;
+}
+
+#manage .options {
+	text-align: center;
+	position: relative;
+	border: 1px solid #9297ae;
+	display: inline-block;
+	width: 185px;
+	height: 200px;
+    float: left;
+    margin: 5px;
+}
+
+#manage .options:hover {
+	border: 1px solid #000;
+	background-color: #fff;
+}
+
+#manage .options a, #manage .nUser {
+	display: block;
+	color: #9297ae;
+	transition: all 0.1s linear;
+	padding: 50px 25px 75px;
+}
+
+#manage .options a:hover, #manage .nUser:hover {
+	color: #000;
+}
+
+/*user mgn*/
+#user .options p {
+	margin-top: 5px;
+}
+
+#manage .nUser {
+	padding: 0;
+}
+
+#manage #users .msg {
+    left: auto;
+    text-align: center;
+}
+
+.fa-user, .fa-user-plus, .fa-edit, .fa-plus-circle, .fa-file, .fa-youtube, .fa-music, .fa-file-alt {
+	font-size: 30px;
+}
+
+.fa-user-plus {
+	color: #000;
+}
+
+.addCont:hover .fa-user-plus, .addCont:hover .fa-plus-circle, .addCont:hover .label
+{
+	color: #000;
+}
+
+#manage .options .optBt {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+}
+
+#manage .options .optBt a {
+	display: inline-block;
+    height: auto;
+    margin: 0 10px;
+    padding: 0;
+}
+
+#manage .options .optBt a.delete, #manage .options .optBt a.add {
+	background-color: #e4e4e4;
+	padding: 5px;
+	margin: 0;
+	display: block;
+	color: #000;
+	width: 100%;
+}
+
+#manage .options .optBt a.delete:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+#manage .vids {
+	width: 45%;
+	height: 300px;
+	display: inline-block;
+	float: left;
+	padding: 15px;
+}
+
+#manage .vids a {
+	padding: 0;
+}
+
+#manage .video {
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+}
+
+#manage .video iframe {
+	height: 100%;
+}
+
+#manage .label {
+	margin-top: 15px;
+}
+
+.addVid {
+	padding: 5px 5px 15px;
+	width: 100%;
+	display: inline-block;
+}
+
+.addVid p, .addVid span {
+	display: inline-block;
+	float: left;
+	margin-right: 15px;
+}
+
+.addVid p {
+	padding-top: 5px;
+}
+
+.addCont {
+	background-color: #cae8ef;
+}
+
+.addCont .label {
+	color: #000;
+}
+
+.addCont .add {
+	border: 0;
+	background-color: #fff;
+	color: #000;
+}
+
+.addCont .optBt:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.longCard {
+	height: 250px !important;
+}
+
+/*infos mgn*/
+#infos {
+	width: 600px;
+	display: inline-block;
+	text-align: left;
+}
+
+#infos .blockfield {
+	margin: 15px 0;
+	float: left;
+}
+
+#infos .contact input, #infos .address input {
+	display: block;
+	font-size: 16px;
+	width: 70%;
+	margin-bottom: 5px;
+	padding: 6px;
+}
+
+#infos .contact, #addPage .blockfield.single {
+	display: inline-block;
+	font-size: 16px;
+	width: 100%;
+	margin-right: 10px;
+}
+
+#infos .address {
+	display: inline-block;
+	font-size: 16px;
+	width: 100%;
+	margin-right: 10px;
+}
+
+#infos label {
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+.bgCont {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	overflow: hidden;
+}
+
+input[type=text], input[type=password] {
+	width: 180px;
+	border: 0;
+	border: 1px solid #303030;
+	padding: 8px 5px;
+}
+
+input[type=file] {
+	cursor: pointer;
+	width: 180px;
+	height: 34px;
+	overflow: hidden;
+	margin: 9px 0;
+}
+
+input[type=file]:before {
+	width: 158px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 31px;
+	content: 'Upload File';
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #000;
+	padding: 0 10px;
+	text-align: center;
+	color: #000;
+}
+
+input[type=file]:hover:before {
+	background: #cae8ef;
+	color: #000;
+}
+
+input[type=file]::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+/* ----------------- add/edit settings ----------------- */
+
+#add h1 {
+	margin-bottom: 30px;
+}
+
+#add .blockfield {
+	width: 49%;
+	padding-right: 25px;
+	float: left;
+	display: inline-block;
+	margin: 15px 0;
+}
+
+#add label {
+	font-size: 20px;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#add input[type=text], #add input[type=number], #add input[type=password], #add select, #add textarea {
+	font-size: 16px;
+	text-align: left;
+	width: 100%;
+	border: 1px solid #aaa;
+	padding: 8px 5px;
+}
+
+#add textarea {
+	height: 130px;
+}
+
+#add input[type=submit], #info .btn {
+	padding: 12px 45px 8px;
+	display: block;
+	clear: both;
+}
+
+.editImg {
+	width: 180px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.editSong {
+	width: 100%;
+	height: auto;
+}
+
+.editImg img {
+	width: 100%;
+}
+
+.dField {
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+
+.dField .editImg {
+	margin: auto;
+}
+
+/* ----------------- footer settings ----------------- */
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #f5f5f5;
+	text-align: center;
+	color: #303030;
+	padding: 15px;
+	width: 100%;
+}
+
+footer p {
+	font-weight: bold;
+}
+
