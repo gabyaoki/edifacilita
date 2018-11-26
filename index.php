@@ -1,5 +1,7 @@
 <?php 
 $_GET["error"] = (isset($_GET["error"]))?$_GET["error"]:"";
+session_start();
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html>

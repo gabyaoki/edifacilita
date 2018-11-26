@@ -37,7 +37,8 @@ $(function(){
 
 	$("#subCondo").on("click", function(){
 		$validation = validateForm();
-		if($validation == true)
+		const checkReg = $("#checkReg").is(':checked');
+		if($validation == true && checkReg)
 		{
 			$.ajax(
 			{	
@@ -46,17 +47,17 @@ $(function(){
 				data: 
 				{
 					name: $("#name").val(),
+					endereco: $("#endereco").val(),
 					email: $("#email").val(),
+					sindico: $("#sindico").val(),
 					phone: $("#phone").val(),
 					phone2: $("#phone2").val(),
-					password: $("#password").val(),
-					dob: $("#dob").val(),
-					code: $("#aCode").val()
+					password: $("#password").val()
 				},				
 				success: function(result)
 				{
 					if(result==true) {
-						window.location = 'confirm.php';
+						window.location = 'formCondoPay.php';
 					}
 				},
 				error: function(a, b, error)
@@ -65,6 +66,31 @@ $(function(){
 				}
 			});
 		}
+	return false;
+	});
+
+	$("#subGratis, #subPremium").on("click", function(){
+		$.ajax(
+		{	
+			url: "models/saveCondoPay.php",
+			method: "POST",	
+			data: 
+			{
+				plan: $("#plan").val()
+			},				
+			success: function(result)
+			{
+				if(result==true) {
+					window.location = 'confirm.php';
+				} else {
+					console.log(result);
+				}
+			},
+			error: function(a, b, error)
+			{
+				console.log(error);
+			}
+		});
 	return false;
 	});
 });
