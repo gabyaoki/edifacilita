@@ -2,34 +2,13 @@
 include("../connect.php");
 session_start();
 
-$sql = "SELECT strCode FROM codes";
-$code = Connect::runSql("singleData", $sql);
+$_SESSION['condo']['name'] = $_POST["name"];
+$_SESSION['condo']['endereco'] = $_POST["endereco"];
+$_SESSION['condo']['email'] = $_POST["email"];
+$_SESSION['condo']['sindico'] = $_POST["sindico"];
+$_SESSION['condo']['phone'] = $_POST["phone"];
+$_SESSION['condo']['phone2'] = $_POST["phone2"];
+$_SESSION['condo']['password'] = $_POST["password"];
 
-$hashpass = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-if(in_array($_POST['code'], $code)) {
-	$sql = "INSERT INTO users
-				(strName,
-				strEmail,
-				strPhone,
-				strAltPhone,
-				strPassword,
-				dob,
-				code,
-				nUserType)
-			VALUES
-				('".$_POST["name"]."',
-				'".$_POST["email"]."',
-				'".$_POST["phone"]."',
-				'".$_POST["phone2"]."',
-				'".$hashpass."',
-				'".$_POST["dob"]."',
-				'".$_POST["code"]."',
-				'2'
-			)";
-	$code = Connect::runSql("saveData", $sql);
-
-	$_SESSION['newEmail'] = $_POST["email"];
-	echo true;
-}
+echo true;
 ?>

@@ -1,7 +1,7 @@
 <?php 
 include ("../connect.php"); 
 
-$sql = "SELECT * FROM users WHERE strUsername='".$_POST["username"]."'";
+$sql = "SELECT users.*, condo.* FROM users LEFT JOIN condo ON users.strEmail = condo.strEmail WHERE users.strEmail='".$_POST["email"]."'";
 $arrUsers = Connect::runSql("getData", $sql);
 
 $passHash = $arrUsers[0]["strPassword"];

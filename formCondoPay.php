@@ -15,7 +15,7 @@
 			<form method="post" action="#" onsubmit="return validateForm()" id="payment" autocomplete="off">
 
 				<div id="free" class="cardPlan">
-					<input type="hidden" name="plan" value="free" />
+					<input type="hidden" id="plan" name="plan" value="free" />
 					<div class="card">
 						<h2>Gratuito</h2>
 						<ul>
@@ -27,7 +27,7 @@
 				</div>
 
 				<div id="premium" class="cardPlan">
-					<input type="hidden" name="plan" value="premium" />
+					<input type="hidden" id="plan" name="plan" value="premium" />
 					<div class="card">
 						<h2>Premium</h2>
 						<ul>

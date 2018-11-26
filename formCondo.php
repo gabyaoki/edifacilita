@@ -17,47 +17,47 @@
 				<div id="condoForm">
 					<div class="blockfield">
 						<label>Nome do Condom&iacute;nio:</label>
-						<input type="text" class="required" name="name" />
+						<input id="name" type="text" class="required" name="name" />
 					</div><!--//blockfield-->
 
 					<div class="blockfield">
-						<label>Endere&ccedil;o:</label>
-						<input type="text" class="required" name="endereco" />
+						<label>Endere&ccedil;o Completo:</label>
+						<input id="endereco" type="text" class="required" name="endereco" />
 					</div><!--//blockfield-->
 
 					<div class="blockfield">
 						<label>E-mail:</label>
-						<input type="text" class="required" name="email" />
+						<input id="email" type="text" class="required" name="email" />
 					</div><!--//blockfield-->
 
 					<div class="blockfield">
 						<label>S&iacute;ndico/Empresa Administradora:</label>
-						<input type="text" class="required" name="sindico" />
+						<input id="sindico" type="text" class="required" name="sindico" />
 					</div><!--//blockfield-->
 
 					<div class="blockfield">
 						<div class="blockfield colLeft single">
 							<label>Telefone:</label>
-							<input type="text" class="required" name="tel" />
+							<input id="phone" type="text" class="required" name="phone" />
 						</div><!--//blockfield-->
 
 						<div class="blockfield colRight single">
 							<label>Telefone 2:</label>
-							<input type="text" class="required" name="telSec" />
+							<input id="phone2" type="text" name="phone2" />
 						</div><!--//blockfield-->
 						
 						<div class="blockfield colLeft single">
 							<label>Senha:</label>
-							<input type="password" class="required" name="senha" />
+							<input id="password" type="password" class="required" name="password" />
 						</div><!--//blockfield-->
 
 						<div class="blockfield colRight single">
 							<label>Confirmar Senha:</label>
-							<input type="password" class="required" name="confSenha" />
+							<input id="confPass" type="password" class="required" name="confPass" />
 						</div><!--//blockfield-->
 
 						<div class="blockfield reg">
-							<input type="checkbox" class="required" name="regulamento" />
+							<input id="checkReg" type="checkbox" class="required" name="checkReg" />
 							<span>Li e Concordo com o <a class="modal" id="regulamento" href="#">regulamento do EdiFacilita</a></span>
 						</div><!--//blockfield-->
 					</div>

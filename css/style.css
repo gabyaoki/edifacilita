@@ -249,6 +249,7 @@ input, textarea {
 .reg {
 	display: inline-block;
 	width: 100%;
+	margin: 0 !important;
 }
 
 .radio span, .reg span {
@@ -258,6 +259,11 @@ input, textarea {
 
 .reg span a {
 	text-decoration: underline;
+	font-weight: bold;
+}
+
+.reg span a:hover {
+	color: #741d96;
 }
 
 #moradorForm .blockfield, #condoForm .blockfield {
