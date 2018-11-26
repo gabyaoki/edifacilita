@@ -119,10 +119,10 @@ input, textarea {
 	opacity: 0.3;
 }
 
-#loginCont, #formCont {
+#loginCont {
 	width: 600px;
 	height: 450px;
-	background: #fff;
+	background-color: #fff;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -130,14 +130,17 @@ input, textarea {
 	right: 0;
 	margin: auto;
 	text-align: center;
-	opacity: 0.
 }
 
 #formCont {
-	max-width: 1000px;
+	max-width: 1200px;
 	width: 90%;
 	height: 100%;
 	padding: 25px 0;
+	background-color: #fff;
+	margin: auto;
+	position: relative;
+	text-align: center;
 }
 
 #loginCont img, #formCont img {
@@ -162,9 +165,9 @@ input, textarea {
 	padding-left: 5px;
 }
 
-#loginCont input[type=submit] {
+#loginCont input[type=submit], #cadastre {
 	display: inline-block;
-	margin-top: 50px;
+	margin-top: 25px;
 	cursor: pointer;
 }
 
@@ -178,19 +181,20 @@ input, textarea {
 	width: 100%;
 }
 
-#moradorForm, .radio {
+#moradorForm, .radio, #condoForm, #payment {
 	width: 50%;
 	margin: auto;
 	margin-bottom: 25px;
 }
 
-#moradorForm label, #moradorForm input, #moradorForm input[type=date] {
+#moradorForm label, #moradorForm input, #condoForm label, #condoForm input, #payment input {
 	display: inline-block;
 	width: 100%;
 }
 
 .blockfield {
-	display: block;
+	display: inline-block;
+	width: 100%;
 }
 
 .blockfield.single {
@@ -214,13 +218,98 @@ input, textarea {
 	margin-right: 8px;
 }
 
-.radio span {
+#condoForm input[type=checkbox] {
+	display: inline-block;
+	width: auto;
+}
+
+.reg {
+	display: inline-block;
+	width: 100%;
+}
+
+.radio span, .reg span {
 	display: inline-block;
 	margin-right: 25px;
 }
 
-#moradorForm .blockfield {
+.reg span a {
+	text-decoration: underline;
+}
+
+#moradorForm .blockfield, #condoForm .blockfield {
 	margin-bottom: 25px;
+}
+
+.cardPlan {
+	width: 50%;
+	padding: 25px;
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+}
+
+.cardPlan:hover {
+	background-color: #f5f5f5;
+}
+
+.cardPlan .btn {
+	margin-top: 25px;
+}
+
+.cardPlan .card {
+	border: 1px solid black;
+	padding: 25px;
+}
+
+.cardPlan h2 {
+	margin-bottom: 15px;
+	font-size: 25px;
+}
+
+.selectSign {
+	width: 60%;
+	margin: auto;
+}
+
+.selectSign .cardPlan:hover {
+	background-color: #fff;
+}
+
+#modalReg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	padding: 25px 35px;
+	display: none;
+}
+
+#modalReg .container {
+	background-color: #fff;
+	padding: 25px 35px;
+	min-height: auto;
+}
+
+#modalReg:before {
+	position: absolute;
+	background-color: #000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.5;
+	content: "";
+}
+
+#modalReg p, #modalReg h2 {
+	margin-bottom: 15px;
+	line-height: 20px;
 }
 
 /* ----------------- header settings ----------------- */
