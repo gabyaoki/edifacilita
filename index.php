@@ -25,7 +25,9 @@ $_GET["error"] = (isset($_GET["error"]))?$_GET["error"]:"";
 					<input type="password" class="required" name="senha" placeholder="password">
 				</div><!--//blockfield-->
 				
-				<input id="submitForm" class="btn main" type="submit" value="Login">
+				<input id="submitForm" class="btn main" type="submit" value="Entrar">
+
+				<a id="signUp" href="signUp.php" class="btn sec">Cadastre-se</a>
 
 				<?php
 				if ($_GET["error"])
