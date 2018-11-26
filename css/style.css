@@ -99,13 +99,13 @@ input, textarea {
 
 /* ----------------- Login settings ----------------- */
 
-#bgLogin {
+#bgLogin, #signupForm {
 	background: #fff;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 }
 
-#bgLogin:before {
+#bgLogin:before, #signupForm:before {
 	content: "";
 	background-color: #cae8ef;
 	background-size: cover;
@@ -119,9 +119,9 @@ input, textarea {
 	opacity: 0.3;
 }
 
-#loginCont {
-	max-width: 600px;
-	max-height: 500px;
+#loginCont, #formCont {
+	width: 600px;
+	height: 450px;
 	background: #fff;
 	position: absolute;
 	top: 0;
@@ -133,7 +133,14 @@ input, textarea {
 	opacity: 0.
 }
 
-#loginCont img {
+#formCont {
+	max-width: 1000px;
+	width: 90%;
+	height: 100%;
+	padding: 25px 0;
+}
+
+#loginCont img, #formCont img {
 	display: inline-block;
 	width: 150px;
 	margin-top: 10px;
@@ -157,15 +164,63 @@ input, textarea {
 
 #loginCont input[type=submit] {
 	display: inline-block;
-	margin-top: 25px;
+	margin-top: 50px;
+	cursor: pointer;
 }
 
 #login {
 	margin-top: 75px;
 }
 
+#signUp {
+	text-align: left;
+	margin-top: 25px;
+	width: 100%;
+}
+
+#moradorForm, .radio {
+	width: 50%;
+	margin: auto;
+	margin-bottom: 25px;
+}
+
+#moradorForm label, #moradorForm input, #moradorForm input[type=date] {
+	display: inline-block;
+	width: 100%;
+}
+
 .blockfield {
 	display: block;
+}
+
+.blockfield.single {
+	width: 45%;
+	display: inline-block;
+}
+
+.blockfield.colLeft {
+	float: left;
+}
+
+.blockfield.colRight {
+	float: right;
+}
+
+.radio {
+	text-align: center;
+}
+
+.radio input[type=radio] {
+	margin-right: 8px;
+}
+
+.radio span {
+	display: inline-block;
+	margin-right: 25px;
+}
+
+#moradorForm .blockfield {
+	margin-bottom: 25px;
 }
 
 /* ----------------- header settings ----------------- */
@@ -471,7 +526,7 @@ nav .options .label {
 	overflow: hidden;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=date] {
 	width: 180px;
 	border: 0;
 	border: 1px solid #303030;
