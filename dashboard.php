@@ -21,6 +21,9 @@ include ("views/header.php");
                 <div id="sindicoinfo-picture" class="bgCont">
                     <img class="bgImg" src="assets/sindico.jpg" alt="foto do sindico">
                 </div>
+            <?php
+            if(isset($_SESSION["sindico"])) {
+            ?>
                 <h3 id="sindicoinfo-name">
                     <?=$_SESSION["sindico"]["name"]?>
                 </h3>
@@ -50,6 +53,15 @@ include ("views/header.php");
                         </div>
                     </div>
                 </div>
+            <?php
+            } else {
+            ?>
+                <h3 id="sindicoinfo-name">
+                    Bem vindo, <?=$_SESSION["currentUser"]["name"]?>
+                </h3>
+            <?php
+            }
+            ?>
             </div>
         </div>
         <div class="dashboard-row">
@@ -84,11 +96,17 @@ include ("views/header.php");
                 </div>
             </div>
         </div>
+    <?php
+    if($_SESSION["condo"]["plan"] == 1) {
+    ?>
         <div class="dashboard-row">
            <div id="advertising">
                <h4> Propaganda </h4>
            </div>
         </div>
+    <?php
+    }
+    ?>
 	</div><!-- //dashboard -->
 </section><!-- //container -->
 

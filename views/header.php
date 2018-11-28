@@ -16,9 +16,21 @@
 
         <div class="options">
             <a href="dashboard.php">
-                <i class="fas fa-home"></i><span class="label">Início</span>
+                <i class="fas fa-home"></i><span class="label">In&iacute;cio</span>
             </a>
         </div><!-- //options -->
+        
+        <?php
+        if(!isset($_SESSION["sindico"]["name"])) {
+        ?>
+            <div class="options">
+                <a href="manage.php?area=users">
+                    <i class="fas fa-user"></i><span class="label">Usu&aacute;rios</span>
+                </a>
+            </div><!-- //options -->
+        <?php
+        }
+        ?>
 
         <div class="options">
             <a href="manage.php?area=projetos">
