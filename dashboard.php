@@ -1,130 +1,28 @@
-<?php 
+<?php
 include ("connect.php"); 
 include ("models/checkUser.php"); 
 include ("views/header.php");
-$_SESSION['strSindico'] = "Seu Zé";
-$_SESSION['strCondo'] = "Ed. Villa Di Lucca";
+
 ?>
-<style>
-    #dashboardContainer{
-        padding-left: 150px;
-        width: 100%;
-        min-height: 100%;
-        position: relative;
-        display: inline-block;
-    }
-    .dashboard-row{
-        width: 100%;
-        display: inline-block;
-        overflow: auto;
-        position: relative;
-    }
-    .dashboard-row>*{
-        height: 100%;
-        float: left;
-        position: relative;
-    }
-    #condoinfo{
-        width: 50%;
-        position: relative;
-    }
-    #condoinfo-picture{
-        height: 295px;
-    }
-    #sindicoinfo{
-        width: 50%;
-        position: relative;
-        text-align: right;
-    }
-    #sindicoinfo-picture{
-        display: inline-block;
-        width: 150px;
-        height: 200px;
-    }
-    #sindicoinfo-bio{
-        width: 60%;
-        padding: 8px;
-        text-align: left;
-        display: inline-block;
-    }
-    #sindicoinfo-bio .bio-row {
-        padding: 4px 0;
-        border-bottom: 2px #eee solid;
-        display: flex;
-        flex-direction: row;
-    }
-    #sindicoinfo-bio .bio-cell:first-child{
-        flex-grow: 1;        
-    }
-    .condo-projects{
-        width: 100%;
-        padding: 20px 0;
-        display: flex;
-        justify-content: center;
-    }
-    .condo-projects-options{
-        width: 180px;
-        padding: 30px;
-        text-align: center;
-        border: 2px #eee solid;
-        border-radius: 5px;
-		margin: 0 20px;
-    }
-    .condo-projects-options .fa-clipboard{
-        color: #3c3c3c;
-        font-size: 80px;
-        position: relative;
-        display: inline-block;
-    }
-    .condo-projects-options .fa-check{
-        color: #7af456;
-        font-size: 30px;
-        position: absolute;
-        bottom: 10px;
-        right: -5px;
-    }
-    .condo-projects-options .fa-check:nth-child(2){
-        color: #5cc73c;
-        right: -15px;
-    }
-    .condo-projects-options .fa-pen{
-        color: #00b1ff;
-        font-size: 30px;
-        position: absolute;
-        bottom: 20px;
-        right: -15px;
-    }
-	#advertising{
-		height: 200px;
-		width: 100%;
-		padding: 60px;
-		text-align: center;
-		background: #3c3c3c;
-		color: #fff;
-	}
-	#advertising h4{
-		font-size: 50px;
-	}
-</style>
 <section id="dashboardContainer">
 	<div id="dashboard">
 		<h1>Bem vindo ao EdiFacilita!</h1>
-		<div class="dashboard-row">
+		<div class="dashboard-row" id="condoInfo">
             <div id="condoinfo">
                 <div id="condoinfo-picture" class="bgCont">
                     <img class="bgImg" src="assets/bg.jpg" alt="foto do condom&iacute;nio">
                 </div>
                 <h3 id="condoinfo-name">
-                    <?=$_SESSION['strCondo']?>
+                    <?=$_SESSION["condo"]["name"]?>
                 </h3>
-                <a href="#" class="btn main"> Regulamento </a>
+                <a href="#" class="modal" id="regulamento">(Leia o Regulamento)</a>
             </div>
             <div id="sindicoinfo">
                 <div id="sindicoinfo-picture" class="bgCont">
                     <img class="bgImg" src="assets/sindico.jpg" alt="foto do sindico">
                 </div>
                 <h3 id="sindicoinfo-name">
-                    <?=$_SESSION['strSindico']?>
+                    <?=$_SESSION["sindico"]["name"]?>
                 </h3>
                 <div id="sindicoinfo-bio">
                     <div class="bio-row">
@@ -157,32 +55,32 @@ $_SESSION['strCondo'] = "Ed. Villa Di Lucca";
         <div class="dashboard-row">
             <div class="condo-projects">
                 <div class="condo-projects-options">
-                    <span class="far fa-clipboard"><span class="fas fa-check"></span><span class="fas fa-check"></span></span>
-                    <p>Projetos Finalizados</p>
+                    <a href="#"><span class="far fa-clipboard"><span class="fas fa-check"></span><span class="fas fa-check"></span></span>
+                    <p>Projetos Finalizados</p></a>
                 </div>
                 <div class="condo-projects-options">
-                    <span class="far fa-clipboard"><span class="fas fa-check"></span></span>
-                    <p>Projetos em Andamento</p>
+                    <a href="#"><span class="far fa-clipboard"><span class="fas fa-check"></span></span>
+                        <p>Projetos em Andamento</p></a>
                 </div>
                 <div class="condo-projects-options">
-                    <span class="far fa-clipboard"><span class="fas fa-pen"></span></span>
-                    <p>Projetos Aprovados</p>
+                    <a href="#"><span class="far fa-clipboard"><span class="fas fa-pen"></span></span>
+                        <p>Projetos Aprovados</p></a>
                 </div>
             </div>
         </div>
         <div class="dashboard-row">
             <div class="condo-projects">
                 <div class="condo-projects-options">
-                    <span class="far fa-clipboard"><span class="fas fa-check"></span><span class="fas fa-check"></span></span>
-                    <p>Agenda de Reuniões</p>
+                    <a href="#"><span class="far fa-clipboard"><span class="fas fa-check"></span><span class="fas fa-check"></span></span>
+                        <p>Agenda de Reuniões</p></a>
                 </div>
                 <div class="condo-projects-options">
-                    <span class="far fa-clipboard"><span class="fas fa-check"></span></span>
-                    <p>Registro de Atas</p>
+                    <a href="#"><span class="far fa-clipboard"><span class="fas fa-check"></span></span>
+                        <p>Registro de Atas</p></a>
                 </div>
                 <div class="condo-projects-options">
-                    <span class="far fa-clipboard"><span class="fas fa-pen"></span></span>
-                    <p>Votação de Novos Projetos</p>
+                    <a href="#"><span class="far fa-clipboard"><span class="fas fa-pen"></span></span>
+                        <p>Votação de Novos Projetos</p></a>
                 </div>
             </div>
         </div>
@@ -193,6 +91,29 @@ $_SESSION['strCondo'] = "Ed. Villa Di Lucca";
         </div>
 	</div><!-- //dashboard -->
 </section><!-- //container -->
+
+<div id="modalReg">
+		<div class="container">
+			<h2>Regulamento</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<a id="closeReg" onclick="return false;" href="#" class="btn main">Fechar</a>
+		</div>
+	</div>
+	<script>
+		var close = document.getElementById('closeReg');
+		var modal = document.getElementById('modalReg');
+		var link = document.getElementById('regulamento');
+
+		close.addEventListener('click', function() {
+			modal.style.display = 'none';
+		});
+
+		link.addEventListener('click', function() {
+			modal.style.display = 'block';
+		});
+	</script>
 
 <?php
 include ("views/footer.php"); 

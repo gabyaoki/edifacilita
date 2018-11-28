@@ -110,7 +110,7 @@ input, textarea {
 	padding: 5px;
 }
 
-.clearfix::after {
+.cf::after {
     content: "";
     clear: both;
     display: table;
@@ -199,18 +199,20 @@ input, textarea {
 	width: 100%;
 }
 
-#moradorForm, .radio, #condoForm, #payment {
+#moradorForm, .radio, #condoForm, #payment, #payment2 {
 	width: 50%;
 	margin: auto;
 	margin-bottom: 25px;
 }
 
-#payment {
-	width: 70%;
+#payment, #payment2 {
+	width: 50%;
 	display: inline-block;
+    float: left;
+    padding: 0 50px;
 }
 
-#moradorForm label, #moradorForm input, #condoForm label, #condoForm input, #payment input {
+#moradorForm label, #moradorForm input, #condoForm label, #condoForm input, #payment input, #payment2 input {
 	display: inline-block;
 	width: 100%;
 }
@@ -268,6 +270,14 @@ input, textarea {
 
 #moradorForm .blockfield, #condoForm .blockfield {
 	margin-bottom: 25px;
+}
+
+#free.cardPlan, #premium.cardPlan {
+	width: 100%;
+	padding: 25px;
+	display: inline-block;
+	margin: 25px auto 0;
+    float: none;
 }
 
 .cardPlan {
@@ -378,7 +388,6 @@ nav .options .label {
     margin-top: 0;
 }
 
-
 #logoCms {
 	display: block;
 	text-align: center;
@@ -386,6 +395,16 @@ nav .options .label {
 
 #logoCms img {
 	width: 90%;
+	padding: 15px;
+}
+
+#logoCms {
+	display: block;
+	text-align: center;
+}
+
+#logoCms img {
+	width: 150px;
 	padding: 15px;
 }
 
@@ -408,242 +427,7 @@ nav .options .label {
 	padding: 10px 25px;
 }
 
-.label, .fa-users, .fa-edit {
-	display: block;
-}
-
-.label {
-	font-size: 18px;
-	margin-top: 5px;
-}
-
-.fa-users, .fa-edit {
-	font-size: 20px;
-}
-
-/* ----------------- dashboard settings ----------------- */
-
-#dashboard, #manage, #add {
-	position: relative;
-	margin: auto;
-	width: 90%;
-	padding: 35px 0;
-	overflow: auto;
-}
-
-#dashboard h1, #users h1 {
-	margin-bottom: 20px;
-	font-size: 35px;
-}
-
-#dashboard p {
-	line-height: 35px;
-}
-
-/* ----------------- manage settings ----------------- */
-
-#users h2 {
-	padding: 70px 0 20px;
-	font-size: 35px;
-	display: block;
-	clear: both;
-}
-
-#subPages {
-	margin-top: 45px;
-	display: inline-block;
-	width: 100%;
-}
-
-#manage .options {
-	text-align: center;
-	position: relative;
-	border: 1px solid #9297ae;
-	display: inline-block;
-	width: 185px;
-	height: 200px;
-    float: left;
-    margin: 5px;
-}
-
-#manage .options:hover {
-	border: 1px solid #000;
-	background-color: #fff;
-}
-
-#manage .options a, #manage .nUser {
-	display: block;
-	color: #9297ae;
-	transition: all 0.1s linear;
-	padding: 50px 25px 75px;
-}
-
-#manage .options a:hover, #manage .nUser:hover {
-	color: #000;
-}
-
-/*user mgn*/
-#user .options p {
-	margin-top: 5px;
-}
-
-#manage .nUser {
-	padding: 0;
-}
-
-#manage #users .msg {
-    left: auto;
-    text-align: center;
-}
-
-.fa-user, .fa-user-plus, .fa-edit, .fa-plus-circle, .fa-file, .fa-youtube, .fa-music, .fa-file-alt {
-	font-size: 30px;
-}
-
-.fa-user-plus {
-	color: #000;
-}
-
-.addCont:hover .fa-user-plus, .addCont:hover .fa-plus-circle, .addCont:hover .label
-{
-	color: #000;
-}
-
-#manage .options .optBt {
-	position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 18px;
-}
-
-#manage .options .optBt a {
-	display: inline-block;
-    height: auto;
-    margin: 0 10px;
-    padding: 0;
-}
-
-#manage .options .optBt a.delete, #manage .options .optBt a.add {
-	background-color: #e4e4e4;
-	padding: 5px;
-	margin: 0;
-	display: block;
-	color: #000;
-	width: 100%;
-}
-
-#manage .options .optBt a.delete:hover {
-	background-color: #000;
-	color: #fff;
-}
-
-#manage .vids {
-	width: 45%;
-	height: 300px;
-	display: inline-block;
-	float: left;
-	padding: 15px;
-}
-
-#manage .vids a {
-	padding: 0;
-}
-
-#manage .video {
-	width: 100%;
-	height: 180px;
-	overflow: hidden;
-}
-
-#manage .video iframe {
-	height: 100%;
-}
-
-#manage .label {
-	margin-top: 15px;
-}
-
-.addVid {
-	padding: 5px 5px 15px;
-	width: 100%;
-	display: inline-block;
-}
-
-.addVid p, .addVid span {
-	display: inline-block;
-	float: left;
-	margin-right: 15px;
-}
-
-.addVid p {
-	padding-top: 5px;
-}
-
-.addCont {
-	background-color: #cae8ef;
-}
-
-.addCont .label {
-	color: #000;
-}
-
-.addCont .add {
-	border: 0;
-	background-color: #fff;
-	color: #000;
-}
-
-.addCont .optBt:hover {
-	background-color: #000;
-	color: #fff;
-}
-
-.longCard {
-	height: 250px !important;
-}
-
-/*infos mgn*/
-#infos {
-	width: 600px;
-	display: inline-block;
-	text-align: left;
-}
-
-#infos .blockfield {
-	margin: 15px 0;
-	float: left;
-}
-
-#infos .contact input, #infos .address input {
-	display: block;
-	font-size: 16px;
-	width: 70%;
-	margin-bottom: 5px;
-	padding: 6px;
-}
-
-#infos .contact, #addPage .blockfield.single {
-	display: inline-block;
-	font-size: 16px;
-	width: 100%;
-	margin-right: 10px;
-}
-
-#infos .address {
-	display: inline-block;
-	font-size: 16px;
-	width: 100%;
-	margin-right: 10px;
-}
-
-#infos label {
-	display: block;
-	font-size: 20px;
-	font-weight: 600;
-	margin-bottom: 5px;
-	width: 100%;
-}
+/* Settings */
 
 .bgCont {
 	background-size: cover;
@@ -659,99 +443,138 @@ input[type=text], input[type=password], input[type=date] {
 	padding: 8px 5px;
 }
 
-input[type=file] {
-	cursor: pointer;
-	width: 180px;
-	height: 34px;
-	overflow: hidden;
-	margin: 9px 0;
+#dashboardContainer{
+    padding-left: 220px;
+    width: 90%;
+    min-height: 100%;
+    position: relative;
+    display: inline-block;
+    margin: 50px 0 25px;
+}
+.dashboard-row{
+    width: 100%;
+    display: inline-block;
+    overflow: auto;
+    position: relative;
+}
+.dashboard-row>*{
+    height: 100%;
+    float: left;
+    position: relative;
+}
+#condoinfo{
+    width: 50%;
+    position: relative;
+}
+#condoinfo-picture{
+    height: 295px;
+}
+#sindicoinfo{
+    width: 50%;
+    position: relative;
+    text-align: right;
+}
+#sindicoinfo-picture{
+    display: inline-block;
+    width: 150px;
+    height: 200px;
 }
 
-input[type=file]:before {
-	width: 158px;
-	height: 30px;
-	font-size: 15px;
-	line-height: 31px;
-	content: 'Upload File';
-	display: inline-block;
-	background: #fff;
-	border: 1px solid #000;
-	padding: 0 10px;
-	text-align: center;
-	color: #000;
+#sindicoinfo-bio{
+    width: 60%;
+    padding: 8px;
+    text-align: left;
+    display: inline-block;
+}
+#sindicoinfo-bio .bio-row {
+    padding: 4px 0;
+    border-bottom: 2px #eee solid;
+    display: flex;
+    flex-direction: row;
+}
+#sindicoinfo-bio .bio-cell:first-child{
+    flex-grow: 1;        
+}
+.condo-projects{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-input[type=file]:hover:before {
-	background: #cae8ef;
-	color: #000;
+.condo-projects-options{
+    width: 210px;
+    text-align: center;
+    border: 2px #eee solid;
+    border-radius: 5px;
+    margin: 0 20px;
 }
 
-input[type=file]::-webkit-file-upload-button {
-	visibility: hidden;
+.condo-projects-options:hover {
+    border-color: #444;
+    background-color: #fbfbfb;
 }
 
-/* ----------------- add/edit settings ----------------- */
-
-#add h1 {
-	margin-bottom: 30px;
+.condo-projects-options a {
+    display: block;
+    padding: 30px;
 }
 
-#add .blockfield {
-	width: 49%;
-	padding-right: 25px;
-	float: left;
-	display: inline-block;
-	margin: 15px 0;
+.condo-projects-options p {
+    margin-top: 15px;
 }
 
-#add label {
-	font-size: 20px;
-	font-weight: 600;
-	display: block;
-	margin-bottom: 5px;
+.condo-projects-options .fa-clipboard{
+    color: #3c3c3c;
+    font-size: 80px;
+    position: relative;
+    display: inline-block;
+}
+.condo-projects-options .fa-check{
+    color: #7af456;
+    font-size: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+}
+.condo-projects-options .fa-check:nth-child(2){
+    color: #5cc73c;
+    right: -15px;
+}
+.condo-projects-options .fa-pen{
+    color: #00b1ff;
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: -15px;
+}
+#advertising{
+    height: 200px;
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    background: #3c3c3c;
+    color: #fff;
+}
+#advertising h4{
+    font-size: 50px;
 }
 
-#add input[type=text], #add input[type=number], #add input[type=password], #add select, #add textarea {
-	font-size: 16px;
-	text-align: left;
-	width: 100%;
-	border: 1px solid #aaa;
-	padding: 8px 5px;
+#condoInfo {
+    margin-bottom: 50px;
 }
 
-#add textarea {
-	height: 130px;
+#condoinfo #regulamento {
+    margin-left: 15px;
 }
 
-#add input[type=submit], #info .btn {
-	padding: 12px 45px 8px;
-	display: block;
-	clear: both;
+#condoinfo #regulamento:hover {
+    text-decoration: underline;
 }
 
-.editImg {
-	width: 180px;
-	height: 150px;
-	overflow: hidden;
-}
-
-.editSong {
-	width: 100%;
-	height: auto;
-}
-
-.editImg img {
-	width: 100%;
-}
-
-.dField {
-	width: 50%;
-	display: inline-block;
-	float: left;
-}
-
-.dField .editImg {
-	margin: auto;
+#condoinfo-name {
+    margin-top: 15px;
+    display: inline-block;
 }
 
 /* ----------------- footer settings ----------------- */

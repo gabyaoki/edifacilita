@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EdiFacilita - Cadastro Realizado com Sucesso</title>
+	<title>EdiFacilita - Cadastro de Condom&iacute;nio</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@ session_start();
 		<div id="formCont" class="confirmPg">
 			<img src="images/logo.png" alt="logo" />
 			<h1>Cadastro Realizado com Sucesso!</h1>
-			<p>Enviamos a confirma&ccedil;&atilde;o de cadastro para <?=$_SESSION['newEmail']?></p>
+			<p style="width: 55%; margin: 35px auto 5px; line-height: 30px;">Enviamos uma confirma&ccedil;&atilde;o de cadastro do condom&iacute;nio para <strong><?=$_SESSION['condoEmail']?></strong> e uma c&oacute;pia para o S&iacute;ndico no e-mail <strong><?=$_SESSION['userEmail']?></strong></p>
 			<a href="index.php" class="btn main">Fazer Login</a>
 		</div><!--//loginCont container-->
 	</div><!--//bgLogin-->

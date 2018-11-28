@@ -4,21 +4,21 @@ $_GET["error"] = (isset($_GET["error"]))?$_GET["error"]:"";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EdiFacilita - Cadastro de Morador</title>
+	<title>EdiFacilita - Cadastro do Síndico</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
 <body>
 <?php
 if($_GET["error"]) {
-	echo '<div class="alert errors">Código de acesso inválido</div>';
+	echo '<div class="alert errors">Por favor, revise os dados preenchidos.</div>';
 }
 ?>
 	<div id="signupForm">
 		<div id="formCont">
 			<img src="images/logo.png" alt="logo" />
 
-			<h1>Cadastro do Morador</h1>
+			<h1>Cadastro do Síndico/Responsável</h1>
 
 			<form method="post" action="#" id="signUp" autocomplete="off">
 
@@ -58,14 +58,9 @@ if($_GET["error"]) {
 							<label>Data de Nascimento:</label>
 							<input id="dob" type="date" class="required" name="dob" />
 						</div><!--//blockfield-->
-
-						<div class="blockfield colRight single">
-							<label>C&oacute;digo de Acesso:</label>
-							<input id="aCode" type="text" class="required" name="code" />
-						</div><!--//blockfield-->
 					</div>
 
-					<input id="subMorador" class="btn main" type="submit" value="Cadastrar" />
+					<input id="subSindico" class="btn main" type="submit" value="Cadastrar" />
 				</div>
 			</form><!--//signUp form-->
 		</div><!--//loginCont container-->

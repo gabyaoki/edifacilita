@@ -31,11 +31,6 @@
 					</div><!--//blockfield-->
 
 					<div class="blockfield">
-						<label>S&iacute;ndico/Empresa Administradora:</label>
-						<input id="sindico" type="text" class="required" name="sindico" />
-					</div><!--//blockfield-->
-
-					<div class="blockfield">
 						<div class="blockfield colLeft single">
 							<label>Telefone:</label>
 							<input id="phone" type="text" class="required" name="phone" />
