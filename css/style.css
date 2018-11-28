@@ -58,7 +58,7 @@ input, textarea {
 }
 
 .main {
-	background-color: #fad3e4; 
+	background-color: #d4b8da; 
 }
 
 .main:hover {
@@ -69,7 +69,7 @@ input, textarea {
 	background-color: #fff; 
 }
 .sec:hover {
-	background-color: #fad3e4; 
+	background-color: #d4b8da; 
 }
 
 .msg {
