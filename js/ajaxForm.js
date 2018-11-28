@@ -75,7 +75,7 @@ $(function(){
 		{
 			$.ajax(
 			{	
-				url: "models/saveSindico.php",
+				url: "models/saveCondoPay.php",
 				method: "POST",	
 				data: 
 				{
@@ -89,7 +89,7 @@ $(function(){
 				success: function(result)
 				{
 					if(result==true) {
-						window.location = 'formCondoPay.php';
+						window.location = 'confirmCondo.php';
 					} else {
 						window.location = 'formMorador.php?error=true';
 					}
@@ -100,56 +100,6 @@ $(function(){
 				}
 			});
 		}
-	return false;
-	});
-
-	$("#subGratis").on("click", function(){
-		$.ajax(
-		{	
-			url: "models/saveCondoPay.php",
-			method: "POST",	
-			data: 
-			{
-				plan: $("#plan").val(),
-			},				
-			success: function(result)
-			{
-				if(result==true) {
-					window.location = 'confirmCondo.php';
-				} else {
-					console.log(result);
-				}
-			},
-			error: function(a, b, error)
-			{
-				console.log(error);
-			}
-		});
-	return false;
-	});
-    
-    $("#subPremium").on("click", function(){
-		$.ajax(
-		{	
-			url: "models/saveCondoPay.php",
-			method: "POST",	
-			data: 
-			{
-				plan: $("#plan2").val(),
-			},				
-			success: function(result)
-			{
-				if(result==true) {
-					window.location = 'confirmCondo.php';
-				} else {
-					console.log(result);
-				}
-			},
-			error: function(a, b, error)
-			{
-				console.log(error);
-			}
-		});
 	return false;
 	});
 });

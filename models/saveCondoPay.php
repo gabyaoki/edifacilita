@@ -6,11 +6,11 @@ session_start();
 $hashpass = password_hash($_SESSION['condo']['password'], PASSWORD_DEFAULT);
 $hashpass2 = password_hash($_SESSION['sindico']['password'], PASSWORD_DEFAULT);
 
-if($_POST["plan"]) {
-    $plan = $_POST["plan"];
-} else {
-    $plan = $_POST["plan2"];
-}
+// if($_POST["plan"]) {
+//     $plan = $_POST["plan"];
+// } else {
+//     $plan = $_POST["plan2"];
+// }
 
 $sql = "INSERT INTO condo
 			(strName,
@@ -25,7 +25,7 @@ $sql = "INSERT INTO condo
             '".$_SESSION['condo']['phone']."',
             '".$_SESSION['condo']['phone2']."',
 			'".$_SESSION['condo']['endereco']."',
-			'".$plan."'
+			'2'
 		)";
 $condoID = Connect::runSql("saveData", $sql);
 
