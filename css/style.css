@@ -462,6 +462,12 @@ input[type=text], input[type=password], input[type=date] {
     float: left;
     position: relative;
 }
+.dashboard-row>h2{
+	float: none;
+    display: block;
+    text-align: center;
+	margin-top: 40px;
+}
 #condoinfo{
     width: 50%;
     position: relative;
@@ -495,6 +501,10 @@ input[type=text], input[type=password], input[type=date] {
 #sindicoinfo-bio .bio-cell:first-child{
     flex-grow: 1;        
 }
+.account-section{
+	
+}
+
 .condo-projects{
     width: 100%;
     padding: 20px 0;
@@ -524,7 +534,9 @@ input[type=text], input[type=password], input[type=date] {
     margin-top: 15px;
 }
 
-.condo-projects-options .fa-clipboard{
+.condo-projects-options .fa-clipboard,
+.fa-receipt,
+.fa-money-check-alt{
     color: #3c3c3c;
     font-size: 80px;
     position: relative;

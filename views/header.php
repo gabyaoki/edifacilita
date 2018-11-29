@@ -19,9 +19,13 @@
                 <i class="fas fa-home"></i><span class="label">In&iacute;cio</span>
             </a>
         </div><!-- //options -->
-        
+        <div class="options">
+            <a href="dashboard.php">
+                <i class="fas fa-file-invoice-dollar"></i><span class="label">Pagamentos</span>
+            </a>
+        </div><!-- //options -->
         <?php
-        if(!isset($_SESSION["sindico"]["name"])) {
+        if(($_SESSION["sindico"]["id"]) == $_SESSION['currentUser']['id']) {
         ?>
             <div class="options">
                 <a href="manage.php?area=users">

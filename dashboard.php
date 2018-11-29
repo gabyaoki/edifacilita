@@ -21,9 +21,6 @@ include ("views/header.php");
                 <div id="sindicoinfo-picture" class="bgCont">
                     <img class="bgImg" src="assets/sindico.jpg" alt="foto do sindico">
                 </div>
-            <?php
-            if(isset($_SESSION["sindico"])) {
-            ?>
                 <h3 id="sindicoinfo-name">
                     <?=$_SESSION["sindico"]["name"]?>
                 </h3>
@@ -33,7 +30,7 @@ include ("views/header.php");
                             <p>Síndico há:</p>
                         </div>
                         <div class="bio-cell">
-                            <p><a href="#">2 anos</a></p>
+                            <p>2 anos</p>
                         </div>
                     </div>
                     <div class="bio-row">
@@ -53,18 +50,27 @@ include ("views/header.php");
                         </div>
                     </div>
                 </div>
-            <?php
-            } else {
-            ?>
-                <h3 id="sindicoinfo-name">
-                    Bem vindo, <?=$_SESSION["currentUser"]["name"]?>
-                </h3>
-            <?php
-            }
-            ?>
             </div>
         </div>
+        <div class="dashboard-row account-section">
+        	<h2>Conta e Pagamentos</h2>
+        	<div class="condo-projects">
+                <div class="condo-projects-options">
+                    <a href="manage.php?area=extrato">
+                    	<span class="fas fa-money-check-alt"></span>
+                    	<p>Extrato do Condom&iacute;nio</p>
+                    </a>
+                </div>
+                <div class="condo-projects-options">
+                    <a href="manage.php?area=payments">
+                    	<span class="fas fa-receipt"></span>
+                    	<p>Comprovantes de Pagamento</p>
+                    </a>
+                </div>
+			</div>
+        </div>
         <div class="dashboard-row">
+            <h2>Projetos</h2>
             <div class="condo-projects">
                 <div class="condo-projects-options">
                     <a href="#"><span class="far fa-clipboard"><span class="fas fa-check"></span><span class="fas fa-check"></span></span>
