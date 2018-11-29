@@ -5,6 +5,7 @@ $sql = "SELECT
             condo.strName AS condoName,
             condo.nSindicoID,
             condo.nPlanID,
+            condo.id AS condoID,
             users.*,
             (SELECT users.strName FROM users WHERE users.id = condo.nSindicoID) AS sindicoName
         FROM
@@ -29,6 +30,7 @@ if(password_verify($_POST["senha"], $passHash))
 	$_SESSION["currentUser"]["code"] = $arrUsers[0]["code"];
 	$_SESSION["condo"]["name"] = $arrUsers[0]["condoName"];
 	$_SESSION["condo"]["plan"] = $arrUsers[0]["nPlanID"];
+    $_SESSION["condo"]["id"] = $arrUsers[0]["condoID"];
 	$_SESSION["sindico"]["name"] = $arrUsers[0]["sindicoName"];
 	$_SESSION["sindico"]["id"] = $arrUsers[0]["nSindicoID"];
     

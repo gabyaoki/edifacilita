@@ -408,18 +408,18 @@ nav .options .label {
 	padding: 15px;
 }
 
-.options {
+nav .options {
 	text-align: left;
 	position: relative;
 	display: inline-block;
 	width: 100%;
 }
 
-.options:hover {
+nav .options:hover {
 	background-color: #ffd4e6;
 }
 
-.options a {
+nav .options a {
 	display: block;
 	height: 100%;
 	color: #000;
@@ -428,6 +428,41 @@ nav .options .label {
 }
 
 /* Settings */
+
+#manage {
+    margin-top: 55px;
+}
+
+#manage h1 {
+    font-size: 30px;
+}
+
+#users .addCont {
+    margin: 15px 0 25px;;
+}
+
+#users .nUser {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    margin-top: 15px;
+}
+
+#users .nUser .label, #users .nUser .fa-user {
+    font-size: 18px;
+}
+
+#users .nUser .label {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#users .nUser .btn {
+    float: right;
+    margin: 0;
+    margin-right: 15px;
+    padding: 5px 15px;
+}
 
 .bgCont {
 	background-size: cover;
