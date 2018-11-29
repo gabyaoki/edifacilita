@@ -40,7 +40,7 @@ $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 					<div class="nUser">
                         <span class="fas fa-user"></span>
                         <p class="label"><?=$user["userName"]?></p>
-                        <a class="btn sec" href="models/delete.php?id=<?=$user['id']?>&amp;area=users">Delete</a>
+                        <a class="btn sec" href="models/delete.php?id=<?=$user['userID']?>&amp;area=users">Delete</a>
 						<a class="btn sec" href="add.php?id=<?=$user['userID']?>&amp;area=users">Edit</a>
 					</div>
 				</div><!-- //options -->
