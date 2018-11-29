@@ -40,16 +40,6 @@
 							<label>Telefone 2:</label>
 							<input id="phone2" type="text" name="phone2" />
 						</div><!--//blockfield-->
-						
-						<div class="blockfield colLeft single">
-							<label>Senha:</label>
-							<input id="password" type="password" class="required" name="password" />
-						</div><!--//blockfield-->
-
-						<div class="blockfield colRight single">
-							<label>Confirmar Senha:</label>
-							<input id="confPass" type="password" class="required" name="confPass" />
-						</div><!--//blockfield-->
 
 						<div class="blockfield reg">
 							<input id="checkReg" type="checkbox" class="required" name="checkReg" />
@@ -89,18 +79,5 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="js/formValidation.js"></script>
 	<script src="js/ajaxForm.js"></script>
-
-	<script>
-		$('#confPass').keyup(function() {
-			var pass = $('#password').val();
-			var passConf = $('#confPass').val();
-
-			if(pass != passConf) {
-				$('#confPass').addClass('error');
-			} else {
-				$('#confPass').removeClass('error');
-			}
-		});
-	</script>
 </body>
 </html>

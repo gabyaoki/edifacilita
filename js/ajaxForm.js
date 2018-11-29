@@ -58,6 +58,8 @@ $(function(){
 				{
 					if(result==true) {
 						window.location = 'formSindico.php';
+					} else {
+						window.location = 'formCondo.php?error=true';
 					}
 				},
 				error: function(a, b, error)
@@ -91,7 +93,7 @@ $(function(){
 					if(result==true) {
 						window.location = 'confirmCondo.php';
 					} else {
-						window.location = 'formMorador.php?error=true';
+						window.location = 'formSindico.php?error=true';
 					}
 				},
 				error: function(a, b, error)
