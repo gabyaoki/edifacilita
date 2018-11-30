@@ -429,11 +429,11 @@ nav .options a {
 
 /* Settings */
 
-#manage {
+#manage, #add {
     margin-top: 55px;
 }
 
-#manage h1 {
+#manage h1, #add h1 {
     font-size: 30px;
 }
 
@@ -534,12 +534,22 @@ input[type=text], input[type=password], input[type=date] {
     flex-direction: row;
 }
 #sindicoinfo-bio .bio-cell:first-child{
-    flex-grow: 1;        
+    flex-grow: 1;
+	text-align: left;
 }
-.account-section{
-	
+#sindicoinfo-bio .bio-cell:last-child{
+    text-align: right;
 }
-
+.extrato-table .bio-row:first-child{
+	font-weight: bold;
+}
+.extrato-table .bio-cell{
+	width: 20%;
+	text-align: center;
+}
+.extrato-table .bio-cell:nth-child(2){
+	width: 40%;
+}
 .condo-projects{
     width: 100%;
     padding: 20px 0;

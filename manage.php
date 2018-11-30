@@ -47,6 +47,66 @@ $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 		<?php
 			}
 		}
+		else if($_GET["area"] == "extrato")
+		{
+			?>
+				<h1>Extrato do Condom&iacute;nio</h1>
+				<div id="sindicoinfo-bio" class="extrato-table">
+                    <div class="bio-row">
+                        <div class="bio-cell">
+                            <p>Data</p>
+                        </div>
+                        <div class="bio-cell">
+                            <p>Lan&ccedil;amentos</p>
+                        </div>
+                        <div class="bio-cell">
+                           <p>Valor</p>
+                        </div><div class="bio-cell">
+                           <p>Saldo</p>
+                        </div>
+                    </div>
+                    <div class="bio-row">
+                        <div class="bio-cell">
+                            <p>01/01/2018</p>
+                        </div>
+                        <div class="bio-cell">
+                            <p>Saldo Anterior</p>
+                        </div>
+                        <div class="bio-cell">
+                           <p></p>
+                        </div><div class="bio-cell">
+                           <p>R$50.000,00</p>
+                        </div>
+                    </div>
+                    <div class="bio-row">
+                        <div class="bio-cell">
+                            <p>10/01/2018</p>
+                        </div>
+                        <div class="bio-cell">
+                            <p>Pagamanto de Fornecedores</p>
+                        </div>
+                        <div class="bio-cell">
+                           <p>-R$1.000,00</p>
+                        </div><div class="bio-cell">
+                           <p>R$49.000,00</p>
+                        </div>
+                    </div>
+                    <div class="bio-row">
+                        <div class="bio-cell">
+                            <p>15/01/2018</p>
+                        </div>
+                        <div class="bio-cell">
+                            <p>Compra Bomba Piscina bbb</p>
+                        </div>
+                        <div class="bio-cell">
+                           <p>-R$4.000,00</p>
+                        </div><div class="bio-cell">
+                           <p>R$45.000,00</p>
+                        </div>
+                    </div>
+                </div>
+		<?php
+		}
         ?>
 		</div>
 	</div>
