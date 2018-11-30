@@ -477,6 +477,10 @@ nav .options a {
     padding: 5px;
 }
 
+#addUser .blockfield input[name=code] {
+    border: 0;
+}
+
 #addUser .btn {
     margin-left: 95px;
 }
@@ -640,10 +644,12 @@ input[type=text], input[type=password], input[type=date] {
 
 #condoinfo #regulamento {
     margin-left: 15px;
+    color: #00b1ff;
 }
 
 #condoinfo #regulamento:hover {
     text-decoration: underline;
+    color: #006fa0;
 }
 
 #condoinfo-name {

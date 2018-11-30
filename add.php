@@ -1,5 +1,6 @@
 <?php 
 include ("connect.php"); 
+include ("models/codegenerator.php"); 
 include ("models/checkUser.php"); 
 include ("views/header.php"); 
 ?>
@@ -18,7 +19,7 @@ include ("views/header.php");
             $strPhone = "";
 			$strAltPhone = "";
             $dob = "";
-			$code = "";
+			$code = Code::generateCode();
 			$id = "";
 		}
 
@@ -65,7 +66,7 @@ include ("views/header.php");
             
             <div class="blockfield">
 				<label>Código:</label>
-				<input type="text" class="required" name="code" value="<?=$code?>" />
+				<input type="text" class="required" name="code" value="<?=$code?>" readonly/>
 			</div><!--//blockfield-->
 
 			<input class="btn main" type="submit" value="Save" />
