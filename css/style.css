@@ -464,6 +464,23 @@ nav .options a {
     padding: 5px 15px;
 }
 
+#addUser .blockfield {
+    margin: 15px 0 0;
+}
+
+#addUser .blockfield label {
+    display: inline-block;
+    width: 90px;
+}
+
+#addUser .blockfield input {
+    padding: 5px;
+}
+
+#addUser .btn {
+    margin-left: 95px;
+}
+
 .bgCont {
 	background-size: cover;
 	background-repeat: no-repeat;
